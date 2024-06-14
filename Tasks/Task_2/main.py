@@ -9,22 +9,24 @@ if none of the conditions are true
 """
 
 #code
-print("\n\n\nfizz buzzer problem quiz started\n\n")
+while True:
 
-n = int(input("\n\nany integer for the quiz. it should be divisible or not divisible by 5 or 3\n\n-> "))
-n_dby_3 = n%3
-n_dby_5 = n%5
+    print("\n\n\nfizz buzzer problem quiz started\n\n")
 
-if (n_dby_3 == 0 and n_dby_5 == 0):
-    print("\n\nFizzBuzz\n\n")
+    n = int(input("\n\nany integer for the quiz. it should be divisible or not divisible by 5 or 3\n\n-> "))
+    n_dby_3 = n%3
+    n_dby_5 = n%5
 
-elif (n_dby_3 == 0 and n_dby_5 != 0):
-    print("\n\nFizz\n\n")
+    if (n_dby_3 == 0 and n_dby_5 == 0):
+        print("\n\nFizzBuzz\n\n")
 
-elif (n_dby_3 != 0 and n_dby_5 == 0):
-    print("\n\nBuzz\n\n")
+    elif (n_dby_3 == 0 and n_dby_5 != 0):
+        print("\n\nFizz\n\n")
 
-else:
-    n = str(n)
-    print(f"\n\nthe number {n} is not divisible by 3 and 5\n\n")
-    print(type(n),"\n\n\n")
+    elif (n_dby_3 != 0 and n_dby_5 == 0):
+        print("\n\nBuzz\n\n")
+
+    else:
+        n = str(n)
+        print(f"\n\nthe number is not divisible by 3 and 5\n\n")
+        print(n,type(n),"\n\n\n")
