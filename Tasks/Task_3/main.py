@@ -79,10 +79,6 @@ while y == 0:
         print("\n\ninsufficiant balance.. there should be more than 1000 in your ballance, total money is",bank_bal)
         add_money = input("\n\ndo you want to add money to access the bank, yes or no?: ")
         time.sleep(1)
-        if add_money == "yes":
-            add_money()
-        else:
-            y = 1
     else:
         bank = input("\n\n\n\n\nW for withdraw, D for deposit, B for check balance\n-> ")
         if bank == "W":
