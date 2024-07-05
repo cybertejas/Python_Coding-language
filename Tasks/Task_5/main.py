@@ -47,3 +47,24 @@ Print the appropriate message based on the evaluations.
 This program helps individuals understand which type of credit card they are eligible for based on their financial and personal information.
 
 '''
+
+employment_status =input("Are you employed ? Y or N")
+income=int(input("Enter your income:"))
+age=int(input("Enter your age:"))
+credit_score=int(input("Enter your credit score:"))
+if employment_status == "Y":
+    if income >= 50000:
+        if age >= 25:
+            if credit_score >= 650:
+                print("You are eligible for the premium credit card.")
+            else:
+                print("Your credit score is too low for the premium credit card.")
+        else:
+            print("You are not old enough for the premium credit card.")
+    else:
+        print("Your income is too low for the premium credit card.")
+else:
+    if income >= 30000 and credit_score >= 600:
+        print("You may be eligible for a basic credit card.")
+    else:
+        print("You do not meet the eligibility criteria for a credit card.")
