@@ -25,7 +25,7 @@ print("\n\n\n\n\n\n\n\n\n\n5 Orders on amazon prime.")
 
 List_1 = ["milk", "eggs", "bread", "butter", "cheese"]
 
-print(f"the 1nd order was the \n\n1){List_1}\n\nprocedding...")
+print(f"the 1nd order was the \n\n1){List_1}\n\nprocedding...\n\n\n\v")
 
 Adding_In_List = ["apples","bananas","orange juice"]
 
@@ -35,3 +35,11 @@ print("adding 3 items.....\n\n")
 
 x = List_1.append(Adding_In_List)
 print(f"the 2nd order was the \n\n1){List_1}\n\n\nprocedding...")
+
+
+y = Adding_In_List.remove(2)
+z = List_1.remove(4)
+
+x = List_1.append(Adding_In_List)
+
+print(f"\n\n\nthe 3rd order after removing items were {List_1} procideiign...\n\n\n")
