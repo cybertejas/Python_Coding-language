@@ -37,9 +37,17 @@ x = List_1.append(Adding_In_List)
 print(f"the 2nd order was the \n\n1){List_1}\n\n\nprocedding...")
 
 
-y = Adding_In_List.remove(2)
-z = List_1.remove(4)
+y = Adding_In_List.remove('orange juice')
+z = List_1.remove('cheese')
 
-x = List_1.append(Adding_In_List)
 
 print(f"\n\n\nthe 3rd order after removing items were {List_1} procideiign...\n\n\n")
+
+
+aa = List_1.append('milk (cheaper brand)')
+ab = List_1.append('bread (cheaper brand)')
+
+print(f"\n\n\nthe 4rd order after adding cheap items were {List_1} procideiign...\n\n\n")
+
+
+print(f"\n\n\n\n\n\n\ndone. order placed, the items you have purchased are as follows:\n-){List_1}\n\n\n")
