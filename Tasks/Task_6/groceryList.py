@@ -44,8 +44,8 @@ z = List_1.remove('cheese')
 print(f"\n\n\nthe 3rd order after removing items were {List_1} procideiign...\n\n\n")
 
 
-aa = List_1.append('milk (cheaper brand)')
-ab = List_1.append('bread (cheaper brand)')
+aa = List_1[0] = "cheap bread"
+ab = List_1[2] = "cheap milk"
 
 print(f"\n\n\nthe 4rd order after adding cheap items were {List_1} procideiign...\n\n\n")
 
