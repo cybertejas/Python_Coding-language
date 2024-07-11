@@ -25,12 +25,12 @@ print("\n\n\n\n\n\n\n\n\n\n5 Orders on amazon prime.")
 
 List_1 = ["milk", "eggs", "bread", "butter", "cheese"]
 
-print(f"the 1nd order was the \n\n1){List_1}\n\n\nprocedding...")
+print(f"the 1nd order was the \n\n1){List_1}\n\nprocedding...")
 
 Adding_In_List = ["apples","bananas","orange juice"]
 
 
-print("\n\n\nadding 3 items.....\n\n\n\n\n")
+print("adding 3 items.....\n\n")
 
 
 x = List_1.append(Adding_In_List)
