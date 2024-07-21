@@ -1,134 +1,70 @@
-"""
+''''
+Problem Statement: Credit Card Eligibility Checker
+Create a Python program to determine the eligibility of an individual for different 
+types of credit cards based on their personal and financial information. The program 
+should evaluate the eligibility for a "premium credit card" and a "basic credit card" 
+based on the following criteria:
 
+Employment Status:
+The individual must be "employed" to be considered for a premium credit card.
 
-your task is to implement a calculator
+Income:
+For a premium credit card, the individual must have an annual income of at least $50,000.
 
+For a basic credit card (if the individual is not employed), the individual must have an annual income of at least $30,000.
+Age:
 
-"""
+For a premium credit card, the individual must be at least 25 years old.
+Credit Score:
 
-#code
+For a premium credit card, the individual must have a credit score of at least 650.
+For a basic credit card (if the individual is not employed), the individual must have a credit score of at least 600.
+Input:
+income: Annual income of the individual (an integer).
+age: Age of the individual (an integer).
+credit_score: Credit score of the individual (an integer).
+employment_status: Employment status of the individual (a string, e.g., "employed" or "unemployed").
+Output:
+Print an appropriate message indicating the type of credit card the individual is eligible for or stating that they do not meet the eligibility criteria for any credit card.
+Example:
+Given the following inputs:
 
-import math
-import os
+income = 75000
+age = 28
+credit_score = 700
+employment_status = "employed"
+The output should be:
+You are eligible for the premium credit card.
 
-"""functions for code"""
+Steps:
+Check if the individual is employed.
+If employed, check if their income is at least $50,000.
+If the income condition is satisfied, check if their age is at least 25.
+If the age condition is satisfied, check if their credit score is at least 650.
+If any of these conditions fail, print appropriate messages.
+If the individual is not employed, check if their income is at least $30,000 and their credit score is at least 600.
+Print the appropriate message based on the evaluations.
+This program helps individuals understand which type of credit card they are eligible for based on their financial and personal information.
 
+'''
 
-def add():
-    print("\n\nadding",calc_num,"and",calc_num2,"gives a summation of:",calc_num+calc_num2,"\n\n")
-def sub():
-    print("\n\nsubbtracting",calc_num,"and",calc_num2,"gives a difference of:",calc_num-calc_num2,"\n\n")
-def mul():
-    print("\n\nmultiplying",calc_num,"and",calc_num2,"gives a product of:",calc_num*calc_num2,"\n\n")
-def div_quo():
-    print("\n\ndividing",calc_num,"and",calc_num2,"gives a quotient of:",calc_num/calc_num2,"\n\n")
-def div_rem():
-    print("\n\ndividing",calc_num,"and",calc_num2,"gives a remainder of:",calc_num%calc_num2,"\n\n")
-"""for other def"""
-
-def fact():
-    print("\n\nthe factorial of",calc_num_other,"is:-> ",math.factorial(calc_num_other),"\n\n")
-def cube():
-    print("\n\nthe cube of the number",calc_num_other,"is",calc_num_other**3,"\n\n")
-def square():
-    print("\n\nthe square of the number",calc_num_other,"is",calc_num_other**2,"\n\n")
-def sqrt():
-    print("\n\nthe square root of the number",calc_num_other,"is",math.sqrt(calc_num_other),"\n\n")
-def cbrt():
-    print("\n\nthe cube root of the number",calc_num_other,"is",math.cbrt(calc_num_other),"\n\n")
-
-"""for trignometry"""
-
-def sin():
-    print(f"\n\nthe sin of number {calc_num_trig} is:",math.sin(calc_num_trig),"\n\n")
-def cos():
-    print(f"the cos of number {calc_num_trig} is:",math.cos(calc_num_trig),"\n\n")
-def tan():
-    print(f"the tan of number {calc_num_trig} is:",math.tan(calc_num_trig),"\n\n")
-
-"""for clearing the screen"""
-
-def clear():
-    os.system('clear')
-"""main code"""
-
-while True:
-    options = input("do you want basic arethmatic or other:-> ")
-    if options == "other" or options == "OTHER" or options == "O" or options == "o":
-        print("\n\ngoing to option other...\n\n")
-        trig = input("do you want trig.:-> ")
-        if trig == "yes" or "y" or "Y":
-
-            print("\n\non the way to trig\n\n")
-            operation_trig = int(input("\n\n\nenter a trig function\n\n1)sin\n2)cos\n3)tan\n\n-> "))
-            calc_num_trig = int(input("\n\n\nenter a number to trig:-> "))
-            if operation_trig == 1:
-                sin()
-
-            if operation_trig == 2:
-                cos()
-
-            if operation_trig == 3:
-                tan()
-
-
-
-        if trig == "no" or "n" or "N":
-            operation_other = int(input("\n\n\nenter which operation you want to do\n\n1)fact\n2)cube\n3)square\n4)cbrt\n5)sqrt\n\n:-> "))
-            calc_num_other = int(input("\n\nwhat is the number:-> "))
-            if operation_other == 1:
-                fact()
-
-
-            if operation_other == 2:
-                cube()
-
-
-            if operation_other == 3:
-                square()
-
-
-            if operation_other == 5:
-                sqrt()
-
-
-            if operation_other == 4:
-                cbrt()
-
-
+employment_status =input("Are you employed ? Y or N")
+income=int(input("Enter your income:"))
+age=int(input("Enter your age:"))
+credit_score=int(input("Enter your credit score:"))
+if employment_status == "Y":
+    if income >= 50000:
+        if age >= 25:
+            if credit_score >= 650:
+                print("You are eligible for the premium credit card.")
+            else:
+                print("Your credit score is too low for the premium credit card.")
         else:
-            print("\n\ninvalid token or input. try again\n\n")
-
-    elif options == "basic" or options == "arethmatic" or options == "a" or options == "A":
-
-        operation = int(input("\n\n\n\n\nenter which to do\n\n1)add\n2)sub\n3)mul\n4)div-quo\n5)div-rem\n\n-> "))
-
-        calc_num = int(input("\n\nenter 1st number:-> "))
-        calc_num2 = int(input("\n\nenter 2nd number:-> "))
-
-
-        if operation == 1:
-            add()
-
-
-        if operation == 2:
-            sub()
-
-
-        if operation == 3:
-            mul()
-
-
-        if operation == 4:
-            div_quo()
-
-
-        if operation == 5:
-            div_rem()
-
-
+            print("You are not old enough for the premium credit card.")
     else:
-        print("\n\ninvaled token or input, try again")
-
-
-
+        print("Your income is too low for the premium credit card.")
+else:
+    if income >= 30000 and credit_score >= 600:
+        print("You may be eligible for a basic credit card.")
+    else:
+        print("You do not meet the eligibility criteria for a credit card.")

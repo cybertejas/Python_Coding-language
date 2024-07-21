@@ -1,32 +1,109 @@
 """
 
 
-Fizz Buzz Problem states that given an integer n, for every integer i <= n, the task is to print “FizzBuzz”
-if i is divisible by 3 and 5, “Fizz” if i is divisible by 3, “Buzz” if i is divisible by 5 or i .(as a string) 
-if none of the conditions are true
+User can withdraw , deposit and view the balance:
+
+- W for withdrawal 
+- D for deposit 
+- B for Balance
+
+Balance = 100000 
+
+MINIMUM Balance required in the account =1000 RS
+
+
 
 
 """
 
-#code
-while True:
+# code
 
-    print("\n\n\nfizz buzzer problem quiz started\n\n")
+import time
 
-    n = int(input("\n\nany integer for the quiz. it should be divisible or not divisible by 5 or 3\n\n-> "))
-    n_dby_3 = n%3
-    n_dby_5 = n%5
-
-    if (n_dby_3 == 0 and n_dby_5 == 0):
-        print("\n\nFizzBuzz\n\n")
-
-    elif (n_dby_3 == 0 and n_dby_5 != 0):
-        print("\n\nFizz\n\n")
-
-    elif (n_dby_3 != 0 and n_dby_5 == 0):
-        print("\n\nBuzz\n\n")
-
+def pin_wth():
+    pin = int(input("\nenter upi pin:-> "))
+    if pin == 1234:
+        time.sleep(3)
+        print("\n\nwithdrawed. the total balance is now",total_money,"after withdrawing",bank_wdw,"\n\n\n")
     else:
-        n = str(n)
-        print(f"\n\nthe number is not divisible by 3 and 5\n\n")
-        print(n,type(n),"\n\n\n")
+        time.sleep(3)
+        print("\n\ntry again\n\n\n","\n\n\n")
+
+
+
+def pin_dep():
+    pin = int(input("\nenter upi pin:-> "))
+    if pin == 1234:
+        time.sleep(3)
+        print("\n\ndeposited money to the bank, your total money is",total_money,"after depositing",bank_dep,"\n\n\n")
+    else:
+        time.sleep(3)
+        print("\n\ntry again\n\n\n","\n\n\n")
+
+
+
+def pin_bal():
+    pin = int(input("\nenter upi pin:-> "))
+    if pin == 1234:
+        time.sleep(3)
+        print("\n\nyour balance is",total_money,"\n\n\n")
+    else:
+        time.sleep(3)
+        print("\n\ntry again\n\n\n")
+
+
+
+def add_money():
+    bank_dep = int(input("\n\nenter how much $ you may deposit\n:-> "))
+    print("\n\ndepositing...\n\n")
+    time.sleep(3)
+    pin_dep()
+
+
+
+
+
+
+
+
+
+
+
+
+bank_bal = 100000
+y = 0
+print("\n\n\nsetting bank balance...")
+time.sleep(2)
+while y == 0:
+    if bank_bal <= 1000:
+        print("\n\ninsufficiant balance.. there should be more than 1000 in your ballance, total money is",bank_bal)
+        add_money = input("\n\ndo you want to add money to access the bank, yes or no?: ")
+        time.sleep(1)
+    else:
+        bank = input("\n\n\n\n\nW for withdraw, D for deposit, B for check balance\n-> ")
+        if bank == "W":
+            bank_wdw = int(input("\n\nenter how much $ to withraw\n:-> ")) 
+            if bank_wdw < 0:
+                print("\n\ntry again\n")
+            else:
+                total_money = bank_bal - bank_wdw
+                if total_money <= 0:
+                    print("\n\ntry again")
+                else:
+                    print("\n\nwithdrawing...\n\n")
+                    pin_wth()
+
+
+
+        if bank == "D":
+            bank_dep = int(input("\n\nenter how much $ you may deposit\n:-> "))
+            print("\n\ndepositing...\n\n")
+            time.sleep(3)
+            total_money = bank_bal + bank_dep
+            pin_dep()
+
+        if bank == "B":
+            print("\n\nviewing bank balance...\n\n")
+            time.sleep(3)
+            pin_bal()
+
