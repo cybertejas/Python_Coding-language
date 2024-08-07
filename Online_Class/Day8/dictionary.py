@@ -1,4 +1,3 @@
-# 
 
 myDt = {
     "Name":"Amazing Guide",
