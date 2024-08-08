@@ -1,3 +1,5 @@
+import os
+os.system('clear')
 """write a code that can compute/calculate the sum of 1st 10 number"""
 
 sum = 0
