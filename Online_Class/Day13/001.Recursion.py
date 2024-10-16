@@ -18,6 +18,5 @@ def Decreement(x):
         
         Decreement(x-1)
         print(x)
-        
 
 Decreement(10)
